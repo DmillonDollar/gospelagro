@@ -31,7 +31,7 @@ const Cart = () => {
     // console.log(temp)
   }, [cartItems])
 
-  const shipping = parseInt(100);
+  const shipping = parseInt(4);
   const grandTotal = shipping + totalAmount
 
   // add to cart
@@ -83,12 +83,12 @@ const Cart = () => {
     console.log(addressInfo)
 
     var options = {
-      key: "",
-      key_secret: "",
+      key: "rzp_test_sg_Aq0MTXsLv6gfPo",
+      key_secret: "2yzVCv6eEpp1y43Rg86KeiY",
       amount: parseInt(grandTotal * 100),
-      currency: "INR",
+      currency: "USD",
       order_receipt: 'order_rcptid_' + name,
-      name: "E-Bharat",
+      name: "AGROFARM",
       description: "for testing purpose",
       handler:  async function  (response) {
         // console.log(response)
