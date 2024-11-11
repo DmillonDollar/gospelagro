@@ -11,6 +11,7 @@ import BlogHeader from './BlogHeader'
 import BlogPage from './BlogPage'
 import Form from './Form'
 import Partner from './Partner'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -35,9 +36,11 @@ const Home = () => {
                         </div>
 
                         <div className='text-center mb-16'>
-                        <button className='border-4 border-yellow-300 px-16 py-4 rounded-full text-white font-bold hover:text-yellow-950 hover:bg-yellow-200'>
+                       <Link to='/products'>
+                       <button className='border-4 border-yellow-300 px-16 py-4 rounded-full text-white font-bold hover:text-yellow-950 hover:bg-yellow-200'>
                           DISCOVER
                         </button>
+                       </Link>
                         </div>
 
 

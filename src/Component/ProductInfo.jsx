@@ -63,7 +63,7 @@ const ProductInfo=()=> {
 
 
     useEffect(() => {
-        if(cartItems!==localStorage){
+        if(cartItems!==localStorageCart){
             localStorage.setItem('cart', JSON.stringify(cartItems));
         }
         

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import { addToCart } from '../Redux/CartSlice'
 // import { Navigate } from 'react-router-dom'
 import DataApi from '../DataContext/DataApi'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // 
 
 const  ProductCard = ()=> {
@@ -43,17 +43,17 @@ const  ProductCard = ()=> {
                     {products.length > 0 ? products.filter((obj) => obj.name.toLowerCase().includes(searchkey))
                         .filter((obj) => obj.category.toLowerCase().includes(filterType))
                         .filter((obj) => obj.price.includes(filterPrice)).map((item, index) => {
-                            const { name, price, imageUrl, id } = item;
+                            const { name, price, id } = item;
                             return (
                                 <div  className="p-4 md:w-1/4  drop-shadow-lg ">
                                     <div className="h-full border-2 hover:shadow-gray-100 hover:shadow-2xl transition-shadow duration-300 ease-in-out    border-gray-200 border-opacity-60 rounded-2xl overflow-hidden" >
                                         <div className="flex justify-center cursor-pointer" >
 
-                                            <Link  to={`/productinfo/${id}`}>
+                                            {/* <Link  to={`/productinfo/${id}`}>
                                             <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={item.images[0]} alt="blog"/>
-                                            </Link>
+                                            </Link> */}
                                           
-                                            {/* <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={item.images[0]} alt="blog"  onClick={()=> window.location.href = `/productinfo/${item.id}`}/> */}
+                                            <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={item.images[0]} alt="blog"  onClick={()=> window.location.href = `/productinfo/${id}`}/>
 
                                         </div>
                                         <div className="p-5 border-t-2">

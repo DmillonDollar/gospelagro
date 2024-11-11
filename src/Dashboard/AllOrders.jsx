@@ -7,7 +7,7 @@ import DataApi from '../DataContext/DataApi'
 
 const AllOrder = () => {
   const context = useContext(DataApi)
-  const {order} = context
+  const {order, loading} = context
   // const userid = JSON.parse(localStorage.getItem('user')).user.uid
   return (
     <div>
