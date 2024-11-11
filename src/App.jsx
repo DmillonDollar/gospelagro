@@ -21,6 +21,7 @@ import UpdateProduct from './Add-Update Form/UpdateProduct'
 import BlogSingle from './Component/BlogSingle'
 import ProductInfo from './Component/ProductInfo'
 import Cart from './Component/Cart'
+import  Missing from './Component/Missing'
 
 const App = () => {
   return (
@@ -80,6 +81,7 @@ const App = () => {
    <Route path='/updateblog' element = {
         <UpdateBlog/>
   } />
+  <Route path= '*' element={<Missing/>}/>
       
     </Routes>
       <ToastContainer/>
